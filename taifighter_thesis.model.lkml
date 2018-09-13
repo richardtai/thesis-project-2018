@@ -27,10 +27,11 @@ explore: adidas_clothing {
   }
 }
 
+# This is a PDT!
 explore: adidas_shoe_transactions {}
 
 # explore: adidas_trans {}
-#
+
 explore: converse {
   join: converse_trans {
     type: inner
@@ -40,49 +41,121 @@ explore: converse {
   }
 }
 
-#
 # explore: converse_trans {}
-#
-# explore: jordan {}
-#
-# explore: jordan_clothing {}
-#
+
+explore: jordan {
+  join: jordan_trans {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${jordan.item_name} = ${jordan_trans.item_name} AND
+            ${jordan.size} = ${jordan_trans.size};;
+  }
+}
+
+explore: jordan_clothing {
+  join: jordan_clothing_trans {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${jordan_clothing.item_name} = ${jordan_clothing_trans.item_name} AND
+            ${jordan_clothing.size} = ${jordan_clothing_trans.size};;
+  }
+}
+
 # explore: jordan_clothing_trans {}
-#
 # explore: jordan_trans {}
-#
-# explore: kith {}
-#
-# explore: kith_clothing {}
-#
+
+explore: kith {
+  join: kith_trans {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${kith.item_name} = ${kith_trans.item_name} AND
+            ${kith.size} = ${kith_trans.size};;
+  }
+}
+
+explore: kith_clothing {
+  join: kith_clothing_trans {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${kith_clothing.item_name} = ${kith_clothing_trans.item_name} AND
+            ${kith_clothing.size} = ${kith_clothing_trans.size};;
+  }
+}
+
 # explore: kith_clothing_trans {}
-#
 # explore: kith_trans {}
-#
-# explore: nike {}
-#
-# explore: nike_clothing {}
-#
+
+explore: nike {
+  join: nike_trans {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${nike.item_name} = ${nike_trans.item_name} AND
+            ${nike.size} = ${nike_trans.size};;
+  }
+}
+
+explore: nike_clothing {
+  join: nike_clothing_trans {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${nike_clothing.item_name} = ${nike_clothing_trans.item_name} AND
+            ${nike_clothing.size} = ${nike_clothing_trans.size};;
+  }
+}
+
 # explore: nike_clothing_trans {}
-#
 # explore: nike_trans {}
-#
-# explore: off_white {}
-#
+
+explore: off_white {
+  join: off_white_trans {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${off_white.item_name} = ${off_white_trans.item_name} AND
+            ${off_white.size} = ${off_white_trans.size};;
+  }
+}
+
 # explore: off_white_trans {}
-#
-# explore: rolex {}
-#
+
+explore: rolex {
+  join: rolex_trans {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${rolex.item_name} = ${rolex_trans.item_name} AND
+            ${rolex.size} = ${rolex_trans.size};;
+  }
+}
+
 # explore: rolex_trans {}
+
+explore: supreme {
+  join: supreme_shoe_trans {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${supreme.item_name} = ${supreme_shoe_trans.item_name} AND
+        ${supreme.size} = ${supreme_shoe_trans.size};;
+  }
+}
 #
-# explore: supreme {}
-#
-# explore: supreme_clothing {}
-#
+explore: supreme_clothing {
+  join: supreme_trans {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${supreme_clothing.item_name} = ${supreme_trans.item_name} AND
+            ${supreme_clothing.size} = ${supreme_trans.size};;
+  }
+}
+
 # explore: supreme_shoe_trans {}
-#
 # explore: supreme_trans {}
-#
-# explore: yeezy {}
-#
+
+explore: yeezy {
+  join: yeezy_trans {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${yeezy.item_name} = ${yeezy_trans.item_name} AND
+            ${yeezy.size} = ${yeezy_trans.size};;
+  }
+}
+
 # explore: yeezy_trans {}
