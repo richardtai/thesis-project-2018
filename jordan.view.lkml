@@ -81,7 +81,7 @@ view: jordan {
     sql: ${TABLE}.Size ;;
   }
 
-  dimension: string_field_6 {
+  dimension: category {
     type: string
     sql: ${TABLE}.string_field_6 ;;
   }
