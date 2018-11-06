@@ -7,7 +7,7 @@ view: adidas_shoe_transactions {
       column: image_url {}
       column: item_name {}
       column: retail_price {}
-      column: price { field: adidas_trans.price }
+#       column: price { field: adidas_trans.price }
       column: size {}
       column: annual_high {}
       column: annual_low {}
